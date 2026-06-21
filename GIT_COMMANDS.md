@@ -1,101 +1,94 @@
-# 🚀 Git Commands Reference
-
+🚀 Git Commands Reference
 A quick reference guide for common Git commands. Save this in your repository for easy access!
 
----
+📋 Table of Contents
+Repository Setup
 
-## Table of Contents
+Basic Workflow
 
-- [Repository Setup](#repository-setup)
-- [Basic Workflow](#basic-workflow)
-- [Branching](#branching)
-- [Remote Repositories](#remote-repositories)
-- [Viewing History & Status](#viewing-history--status)
-- [Undoing Changes](#undoing-changes)
-- [SSH & Authentication](#ssh--authentication)
-- [Troubleshooting](#troubleshooting)
+Branching
 
----
+Remote Repositories
 
-## Repository Setup
+Viewing History & Status
 
-| Command | What it does |
-| :--- | :--- |
-| `git init` | Initializes a **new** Git repository in the current folder. |
-| `git clone <url>` | Downloads an **existing** repository from GitHub. |
-| `git clone git@github.com:username/repo.git` | Clones using **SSH** (no password prompts). |
-| `git clone https://github.com/username/repo.git` | Clones using **HTTPS** (requires token/password). |
+Undoing Changes
 
----
+SSH & Authentication
 
-## Basic Workflow
+Troubleshooting
 
-### The 3-Step Process
-
-```bash
-git add <file>         # Stage specific file(s) for commit
-git add .              # Stage ALL changes in current folder
-git commit -m "message" # Save changes locally
-git push origin main   # Upload to GitHub
-Common Commands
+📁 Repository Setup
+Command	What it does
+git init	Initializes a new Git repository in the current folder.
+git clone <url>	Downloads an existing repository from GitHub (or other remote).
+git clone git@github.com:username/repo.git	Clones using SSH (no password prompts after setup).
+git clone https://github.com/username/repo.git	Clones using HTTPS (requires token/password).
+📝 Basic Workflow
+The 3-Step Process
+bash
+git add <file>      # Stage specific file(s) for commit
+git add .           # Stage ALL changes in current folder
+git commit -m "message"  # Save changes locally with a message
+git push origin <branch> # Upload to GitHub
 Command	What it does
 git status	Shows what's changed and what's staged.
 git add <filename>	Stages a specific file for commit.
-git add .	Stages all changed files in current folder.
+git add .	Stages all changed files in the current folder.
 git add -A	Stages all changes everywhere in the repo.
-git commit -m "message"	Saves staged changes with a message.
-git push origin main	Uploads commits to GitHub (main branch).
+git commit -m "message"	Saves staged changes with a descriptive message.
+git push origin main	Uploads your commits to GitHub (main branch).
 git pull	Downloads latest changes from GitHub.
-Branching
+🌿 Branching
 Command	What it does
-git branch	Shows all branches (* = current).
+git branch	Shows all branches in your repo (* = current branch).
 git branch <name>	Creates a new branch.
 git checkout <branch>	Switches to another branch.
 git checkout -b <branch>	Creates and switches to a new branch.
-git merge <branch>	Merges another branch into current one.
+git merge <branch>	Merges another branch into the current one.
 git branch -d <branch>	Deletes a branch (local).
-Remote Repositories
+🌐 Remote Repositories
 Command	What it does
-git remote -v	Shows all remote connections.
-git remote add origin <url>	Connects local repo to a remote.
-git remote set-url origin <new-url>	Changes the remote URL.
-git push -u origin main	Pushes and sets upstream.
-Viewing History & Status
+git remote -v	Shows all remote connections (fetch/push URLs).
+git remote add origin <url>	Connects local repo to a remote (usually GitHub).
+git remote set-url origin <new-url>	Changes the remote URL (e.g., from HTTPS to SSH).
+git push -u origin main	Pushes and sets upstream (future pushes = just git push).
+📊 Viewing History & Status
 Command	What it does
-git status	Shows current state of working directory.
+git status	Shows current state of your working directory.
 git log	Shows commit history (press q to exit).
-git log --oneline	Shows compact 1-line history.
-git log --graph	Shows history with branch graph.
-git diff	Shows differences between working dir and staging.
+git log --oneline	Shows compact 1-line commit history.
+git log --graph	Shows history with a graph of branches.
+git diff	Shows differences between working directory and staging.
 git diff --staged	Shows differences between staging and last commit.
 git show <commit-hash>	Shows details of a specific commit.
-git blame <file>	Shows who changed which lines.
-Undoing Changes
+git blame <file>	Shows who changed which lines in a file.
+↩️ Undoing Changes
 Command	What it does
-git restore <file>	Discards local changes to a file.
-git restore --staged <file>	Unstages a file (keeps changes).
-git reset HEAD~1	Undoes the last commit (keeps changes).
-git reset --hard HEAD~1	Undoes last commit AND discards changes ⚠️
-git revert <commit-hash>	Creates new commit that undoes previous (safe).
+git restore <file>	Discards local changes to a file (reverts to last commit).
+git restore --staged <file>	Unstages a file (keeps changes, but removes from staging).
+git reset HEAD~1	Undoes the last commit (keeps changes locally).
+git reset --hard HEAD~1	Undoes last commit AND discards changes (⚠️ permanent!).
+git revert <commit-hash>	Creates a new commit that undoes a previous commit (safe).
 git rm <file>	Removes a file from tracking and disk.
-git rm --cached <file>	Removes from tracking but keeps on disk.
-SSH & Authentication
+git rm --cached <file>	Removes a file from tracking but keeps it on disk.
+🔑 SSH & Authentication
 Command	What it does
-ssh-keygen -t rsa -b 4096 -C "email@example.com"	Generates SSH key pair.
-cat ~/.ssh/id_rsa.pub	Displays your public SSH key.
+ssh-keygen -t rsa -b 4096 -C "email@example.com"	Generates SSH key pair for GitHub authentication.
+cat ~/.ssh/id_rsa.pub	Displays your public SSH key (copy to GitHub).
 ssh -T git@github.com	Tests SSH connection to GitHub.
 git config --global user.name "Your Name"	Sets global Git username.
 git config --global user.email "you@example.com"	Sets global Git email.
 git config --list	Shows all Git configuration.
-Troubleshooting
+🛠️ Troubleshooting
 Problem	Solution
 fatal: not a git repository	You're not in a Git repo. Run git init or cd to repo.
 Authentication failed	Use SSH or Personal Access Token (not password).
-remote: Repository not found	Check repo name/URL, or create it on GitHub first.
+remote: Repository not found	Check repository name / URL, or create it on GitHub first.
 Please tell me who you are	Run git config --global user.name and user.email.
 Your branch is ahead of 'origin/main'	Run git push to upload your commits.
 Your branch is behind 'origin/main'	Run git pull to download latest changes.
-Quick Cheat Sheet
+⚡ Quick Cheat Sheet
 Most common commands (copy-paste ready):
 bash
 # After making changes:
@@ -115,7 +108,7 @@ git checkout other-branch
 
 # Connect to GitHub (SSH):
 git remote add origin git@github.com:username/repo.git
-Commands for this course
+🎯 Commands for this course (your specific setup)
 For DACA-portfolio:
 bash
 cd ~/Desktop/Kursus/Repositary/DACA-portfolio
@@ -128,7 +121,7 @@ cd ~/Desktop/Kursus/Repositary/DACA-group
 git add .
 git commit -m "Add new content"
 git push origin main
-Pro Tips
+📚 Pro Tips
 Always git status before committing – see what you're about to save.
 
 Write meaningful commit messages – future you will thank you.
@@ -143,11 +136,3 @@ bash
 touch .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.log" >> .gitignore
-Need More Help?
-Git Documentation
-
-GitHub Help
-
-Git Cheat Sheet (PDF)
-
-Happy coding! 🚀
