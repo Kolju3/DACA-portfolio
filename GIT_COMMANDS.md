@@ -1,32 +1,38 @@
-🚀 Git Commands Reference
+# 🚀 Git Commands Reference
+
 A quick reference guide for common Git commands. Save this in your repository for easy access!
 
-📋 Table of Contents
-Repository Setup
+---
 
-Basic Workflow
+## 📋 Table of Contents
 
-Branching
+- [Repository Setup](#repository-setup)
+- [Basic Workflow](#basic-workflow)
+- [Branching](#branching)
+- [Remote Repositories](#remote-repositories)
+- [Viewing History & Status](#viewing-history--status)
+- [Undoing Changes](#undoing-changes)
+- [SSH & Authentication](#ssh--authentication)
+- [Troubleshooting](#troubleshooting)
 
-Remote Repositories
+---
 
-Viewing History & Status
+## 📁 Repository Setup
 
-Undoing Changes
+| Command | What it does |
+| :--- | :--- |
+| `git init` | Initializes a **new** Git repository in the current folder. |
+| `git clone <url>` | Downloads an **existing** repository from GitHub (or other remote). |
+| `git clone git@github.com:username/repo.git` | Clones using **SSH** (no password prompts after setup). |
+| `git clone https://github.com/username/repo.git` | Clones using **HTTPS** (requires token/password). |
 
-SSH & Authentication
+---
 
-Troubleshooting
+## 📝 Basic Workflow
 
-📁 Repository Setup
-Command	What it does
-git init	Initializes a new Git repository in the current folder.
-git clone <url>	Downloads an existing repository from GitHub (or other remote).
-git clone git@github.com:username/repo.git	Clones using SSH (no password prompts after setup).
-git clone https://github.com/username/repo.git	Clones using HTTPS (requires token/password).
-📝 Basic Workflow
-The 3-Step Process
-bash
+### The 3-Step Process
+
+```bash
 git add <file>      # Stage specific file(s) for commit
 git add .           # Stage ALL changes in current folder
 git commit -m "message"  # Save changes locally with a message
@@ -136,3 +142,11 @@ bash
 touch .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.log" >> .gitignore
+📖 Need More Help?
+Git Documentation
+
+GitHub Help
+
+Git Cheat Sheet (PDF)
+
+Happy coding! 🚀
