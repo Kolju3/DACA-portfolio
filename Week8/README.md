@@ -1,4 +1,10 @@
-# Week8
+# Nädal 2 – kalju individuaalne töö
 
-Placeholder for Week8 materials.
-Content for Week 8 of the Data Analysis course.
+## Ülesanne
+_Täienda ise_
+
+## Mida tegin
+- _Lisa siia_
+
+## SQL päringud / failid
+_Lisa lingid_

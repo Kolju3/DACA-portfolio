@@ -1,4 +1,10 @@
-# Week10
+# Nädal 2 – kalju individuaalne töö
 
-Placeholder for Week10 materials.
-Content for Week 10 of the Data Analysis course.
+## Ülesanne
+_Täienda ise_
+
+## Mida tegin
+- _Lisa siia_
+
+## SQL päringud / failid
+_Lisa lingid_
