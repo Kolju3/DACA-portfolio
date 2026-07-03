@@ -14,6 +14,9 @@ What i learned
 -3) CREATE TABLE (Creates a table)
 -4) LIKE (Gives table exactly same data types as orginal table makes sure its as similar as possible)
 -5) INSERT INTO (Copies data from orginal table)
+-6) WITH I learned that you use one WITH block for multiple CTEs. 
+-7) CROSS JOIN I learned how cross join works. It produces table that is multiplication of two input tabels in size. Because it adds to table A each row Table B rows. But it does not change inside values of tabels.
+-8) Learned that in from line its common to name some tabels shorter to make in the end selection shorter. For example FROM summary s is same as FROM summary AS s. And in the select then you dont need to write summary.email but just s.emails.
 
 ## SQL päringud / failid
 _Lisa lingid_
